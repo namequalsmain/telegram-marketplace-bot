@@ -178,7 +178,28 @@ No code changes needed — the language picker and settings menu pick up the new
 
 ## 📸 Screenshots
 
-> _Coming soon — `/start` flow, catalog, admin panel, payment._
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/01-main-menu.png" alt="Main menu" width="300"/><br/>
+      <sub><b>Main menu</b> — inline-only buttons, localized</sub>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/02-catalog.png" alt="Catalog root" width="300"/><br/>
+      <sub><b>Catalog</b> — nested categories with breadcrumbs</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/03-product-list.png" alt="Products in category" width="300"/><br/>
+      <sub><b>Products</b> — name + price in ⭐ Telegram Stars</sub>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/04-settings.png" alt="Settings" width="300"/><br/>
+      <sub><b>Settings</b> — switch UI language at any time</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
