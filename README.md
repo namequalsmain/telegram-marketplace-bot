@@ -1,11 +1,11 @@
-# 🛒 Telegram Marketplace Bot
+# Telegram Marketplace Bot
 
 [![CI](https://github.com/namequalsmain/telegram-marketplace-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/namequalsmain/telegram-marketplace-bot/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 A production-ready Telegram bot that powers a small online marketplace: browse
-categories, view products, pay with Telegram Stars (⭐). Comes with a full admin
+categories, view products, pay with Telegram Stars. Comes with a full admin
 panel for managing the catalog, broadcasting messages, and moderating users.
 
 Built as a portfolio project to demonstrate clean async Python architecture
@@ -14,26 +14,26 @@ with **aiogram 3**, **SQLAlchemy 2 (async)**, **PostgreSQL**, **Alembic**, and
 
 ---
 
-## ✨ Features
+## Features
 
 ### For users
-- 🌐 **Multi-language** — Russian and English out of the box, easy to add more
-- 📁 **Unlimited category nesting** — admin decides the tree depth
-- 🛍 **Product cards** with photos, descriptions, and Telegram Stars pricing
-- 💳 **Native Telegram Stars payments** (XTR currency, no payment provider required)
-- 🔔 **Optional force-subscribe** to a channel (toggled by admin without restart)
-- 👤 **Profile** with balance and registration date
+- **Multi-language** — Russian and English out of the box, easy to add more
+- **Unlimited category nesting** — admin decides the tree depth
+- **Product cards** with photos, descriptions, and Telegram Stars pricing
+- **Native Telegram Stars payments** (XTR currency, no payment provider required)
+- **Optional force-subscribe** to a channel (toggled by admin without restart)
+- **Profile** with balance and registration date
 
 ### For admins
-- 📁 **Catalog CRUD** — add / rename / delete categories and products (with photo upload)
-- 📣 **Broadcast** with rate-limit handling, blocked-user detection, and delivery report
-- 📊 **Statistics** — users, admins, banned, products, purchases, revenue
-- 👥 **User moderation** — ban / unban / promote / demote by Telegram ID
-- ⚙️ **Runtime settings** — required channel, ToS text, support contact, edited via UI
+- **Catalog CRUD** — add / rename / delete categories and products (with photo upload)
+- **Broadcast** with rate-limit handling, blocked-user detection, and delivery report
+- **Statistics** — users, admins, banned, products, purchases, revenue
+- **User moderation** — ban / unban / promote / demote by Telegram ID
+- **Runtime settings** — required channel, ToS text, support contact, edited via UI
 
 ---
 
-## 🛠 Tech stack
+## Tech stack
 
 | Layer | Tool |
 |---|---|
@@ -48,11 +48,11 @@ with **aiogram 3**, **SQLAlchemy 2 (async)**, **PostgreSQL**, **Alembic**, and
 
 ---
 
-## 📂 Project layout
+## Project layout
 
 ```
 market/
-├── config.py                  # Pydantic-style settings from .env
+├── config.py                  # Settings loaded from .env
 ├── main.py                    # Entry point: wires middlewares + routers
 ├── alembic/                   # DB migrations
 ├── database/
@@ -88,7 +88,7 @@ market/
 
 ---
 
-## 🚀 Quick start (Docker)
+## Quick start (Docker)
 
 ```bash
 # 1. Clone
@@ -110,7 +110,7 @@ Open your bot in Telegram and send `/start`. As `MAIN_ADMIN_ID`, you'll see the 
 
 ---
 
-## 🧑‍💻 Local development (without Docker)
+## Local development (without Docker)
 
 Requires Python 3.11+ and a running PostgreSQL.
 
@@ -146,7 +146,7 @@ ruff format .
 
 ---
 
-## 🗄 Database migrations
+## Database migrations
 
 This project uses Alembic. Anytime you change a model:
 
@@ -163,12 +163,12 @@ alembic downgrade -1
 
 ---
 
-## 🌍 Adding a new language
+## Adding a new language
 
 1. Open [`bot/i18n.py`](bot/i18n.py).
 2. Add the code to `LANGUAGES`:
    ```python
-   LANGUAGES = {"ru": "🇷🇺 Русский", "en": "🇬🇧 English", "he": "🇮🇱 עברית"}
+   LANGUAGES = {"ru": "Русский", "en": "English", "he": "עברית"}
    ```
 3. Add the same key to every entry in `TRANSLATIONS`. Missing keys fall back to `DEFAULT_LANG`.
 
@@ -176,7 +176,7 @@ No code changes needed — the language picker and settings menu pick up the new
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <table>
   <tr>
@@ -192,7 +192,7 @@ No code changes needed — the language picker and settings menu pick up the new
   <tr>
     <td align="center">
       <img src="docs/screenshots/03-product-list.png" alt="Products in category" width="300"/><br/>
-      <sub><b>Products</b> — name + price in ⭐ Telegram Stars</sub>
+      <sub><b>Products</b> — name + price in Telegram Stars</sub>
     </td>
     <td align="center">
       <img src="docs/screenshots/04-settings.png" alt="Settings" width="300"/><br/>
@@ -203,6 +203,6 @@ No code changes needed — the language picker and settings menu pick up the new
 
 ---
 
-## 📜 License
+## License
 
 MIT — see [LICENSE](LICENSE).
